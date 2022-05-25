@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VargasCristianTareaS6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="16" CornerRadius="0">
+            <Label Text="SEMANA 6" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label x:Name="texto" Text=""></Label>
+        <Button Text="Consultar" x:Name="btnGet" Clicked="btnGet_Clicked" ></Button>
+        <ListView x:Name="MylistView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblNombre" Text="{Binding nombre}">
+                            </Label>
+                            <Label x:Name="lblApellido" Text="{Binding apellido}">
+                            </Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Insertar" x:Name="btnInsertar" Clicked="btnInsertar_Clicked"></Button>
+        <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked"></Button>
+        <Button Text="Eliminar" x:Name="btnEliminar" Clicked="btnEliminar_Clicked"></Button>
+
+    </StackLayout>
+
+</ContentPage>
